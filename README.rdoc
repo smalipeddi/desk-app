@@ -1,28 +1,13 @@
 == README
+This is a desk application that provide a UI to perform the following operations:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. List the available case filters and allow a user to click on one.
+2. Get a list of cases available in the selected case filter and present them with their labels.
+3. Get a list of labels in the site and present them.
+4. Create a label and add it to the list of labels.
+5. Assign a label to a case.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
+ruby 1.9.3p484 (2013-11-22 revision 43786) [i686-linux]
+database : postgresql 
+rspec is used for testing teh application.
 <tt>rake doc:app</tt>.
