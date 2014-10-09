@@ -1,0 +1,47 @@
+<h3> New Label</h3>
+<%= form_for :label, :url => { :controller=>'home', :action => 'create_label' }, :html => { :class => 'form-horizontal', :id=> 'add_label_form' } do |f| %> 
+ 
+	<div id="label_errors">	
+		<ul id="errors_list">				
+		</ul>
+	</div>   
+	
+	<table class="padded_td">
+		<tr>
+			<td>Label Name:</td>
+			<td><%= text_field_tag :name, '', :class=>"form-control label_field" %></td>
+		</tr>
+		<tr>
+			<td>
+				</td>
+				<td>
+				<%= link_to_function "Save", "onSubmitLabelForm(event)", :class=>"btn btn-primary btn-sm", "data-disable-with" => "Saving...", :style=>"color:#fff" %>   
+				<%= link_to "Cancel", root_url, :class=>"btn btn-danger btn-sm", "data-disable-with" => "Loading..." %>  
+			</td>
+		</tr>
+	</table>
+	 
+<% end %>		 
+ 
+
+<script type="text/javascript">
+
+	function onSubmitLabelForm(e)
+	{ 		 		
+		if($('#name').val() == "")
+		{
+			$("#label_errors").show()
+			$("#label_errors li").remove();
+			$("#label_errors").addClass("alert alert-error"); 
+			$("#label_errors").append("<li>Please enter label name.</li>");
+			e.preventDefault();
+   			e.stopPropagation();
+		}
+		else
+		{
+			$("#label_errors").hide()
+			$("#label_errors li").remove(); 
+			$("#add_label_form").submit();
+		}
+	} 
+</script> 

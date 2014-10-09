@@ -1,0 +1,12 @@
+<div id="sidebar-wrapper"> 
+	<h3 style="color: #fff;text-align: center"> Desk</h3> 
+	<ul class="sidebar-nav">
+		<li class="sidebar-brand"> 
+			<%= link_to "Filters", filters_url, :class=>"menu_link  #{'active_link' if(request.fullpath =~ /filters/)}" %> 
+			<%= link_to "Labels", labels_url, :class=>"menu_link #{'active_link' if(request.fullpath =~ /labels/)}" %> 
+			<%= link_to "Create new label", new_label_url, :class=>"menu_link #{'active_link' if(request.fullpath =~ /new_label/)}" %> 
+			<%= link_to "Assign label", assign_label_url, :class=>"menu_link #{'active_link' if(request.fullpath =~ /assign_label/)}" %>  
+		</li>
+	</ul> 
+</div> 
+

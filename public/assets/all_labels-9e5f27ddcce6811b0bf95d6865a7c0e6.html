@@ -1,0 +1,18 @@
+<div style="margin-left: 250px;">
+    <h3>Labels</h3> 
+    <hr>
+    Search: <input ng-model="searchText">
+    <br /><br/>
+    <h4 ng-show="allLabels.length == 0">There are no filters to display.</h4>
+
+    <table class="table table-bordered" style="width: 100%" ng-hide="allLabels.length == 0">
+        <tr>
+            <th>Name</th>
+        </tr>
+        <tr ng-repeat="label in allLabels | filter:searchText">
+            <td>
+                {{label.name}}
+            </td>
+        </tr>
+    </table>
+</div>

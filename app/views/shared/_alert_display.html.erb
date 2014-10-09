@@ -1,0 +1,13 @@
+<% unless alert.blank? %>
+  <p class='alert'> <%= alert %> </p>
+<%end%>  
+
+<% unless notice.blank? %>
+  <div class='alert alert-success'> 
+     <%= link_to 'x', '#', :class => "close", 'data-dismiss' => "alert" %>
+     <%= notice %>
+  </div>   
+<%end%> 
+  
+  
+

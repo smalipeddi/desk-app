@@ -1,0 +1,21 @@
+<div style="margin-left: 250px;">
+    <h3>New Label</h3> 
+    <hr>
+    <br/>
+    <form class="form-horizontal" id="add_label_form">
+        <table class="padded_td">
+            <tr>
+                <td>Label Name:</td>
+                <td><input type="text" name="name" ng-model="label.name" required/></td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button ng-click="goToHomePage()" class="btn btn-danger btn-sm">Cancel</button>
+                    <button ng-click="addLabel()" class="btn btn-primary btn-sm">SAVE</button>
+                </td>
+            </tr>
+        </table>
+    </form> 
+</div>

@@ -1,0 +1,29 @@
+development:
+  adapter: postgresql
+  database: deskapp
+  host: localhost
+  username: sunitha
+  password: sunitha
+  pool: 5
+  timeout: 5000
+  port: 5432
+
+production:
+  adapter: postgresql
+  database: deskapp
+  host: localhost
+  username: sunitha
+  password: sunitha
+  pool: 5
+  timeout: 5000
+  port: 5432
+
+test:
+  adapter: postgresql
+  database: deskapp
+  host: localhost
+  username: sunitha
+  password: sunitha
+  pool: 5
+  timeout: 5000
+  port: 5432

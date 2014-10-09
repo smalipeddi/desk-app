@@ -1,0 +1,19 @@
+<div style="margin-left: 250px;">
+    <h3>Filters</h3>
+    <hr>
+    Search: <input ng-model="searchText">
+    <br /><br/>
+    <h4 ng-show="allFilters.length == 0">There are no filters to display.</h4>
+
+    <table class="table table-bordered" style="width: 100%" ng-hide="allFilters.length == 0">
+        <tr>
+            <th>Name</th>
+        </tr>
+        <tr ng-repeat="filter in allFilters | filter:searchText">
+            {{filter.id}}
+            <td>
+                <a href="" ng-click="getFilterCases(filter.id)">{{filter.name}}</a>
+            </td>
+        </tr>
+    </table>
+</div>

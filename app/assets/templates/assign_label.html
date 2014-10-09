@@ -1,0 +1,34 @@
+<div style="margin-left: 250px;">
+    <h3>Assign Label</h3>
+    <hr>
+    <br />
+    <form class="form-horizontal" name="assignLabelForm">
+        <table class="padded_td">
+            <tr>
+                <td>Case:</td>
+                <td>
+                    <select ng-model="selectedCase" ng-options="case.id as case.subject for case in cases" class="form-control long_dropdown" required>
+                        <option value="">-- choose a case --</option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Label:</td>
+                <td>
+                    <select ng-model="selectedLabel" ng-options="label.id as label.name for label in labels" class="form-control medium_dropdown" required>
+                        <option value="">-- choose a label --</option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button ng-click="goToHomePage()" class="btn btn-primary btn-sm">Cancel</button>
+                    <button ng-click="assignLabel()" class="btn btn-danger btn-sm">SAVE</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

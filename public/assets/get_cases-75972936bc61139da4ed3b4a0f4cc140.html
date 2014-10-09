@@ -1,0 +1,23 @@
+<div style="margin-left: 250px;">
+    <h3>Cases List</h3>
+    <hr>
+    <span ng-show="cases.length == 0">There are no cases under this filter.</span>
+    <div ng-show="cases.length > 0">
+        <table class="table table-bordered" style="width: 100%">
+            <tr>
+                <th>Customer</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Updated</th>
+                <th>Priority</th>
+            </tr>
+            <tr ng-repeat="case in cases ">
+                <td> {{case.first_name}} {{case.last_name}}</td>
+                <td> {{case.labels}}-{{case.subject}}</td>
+                <td> {{case.status}}</td>
+                <td> {{case.updated}}</td>
+                <td> {{case.priority}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

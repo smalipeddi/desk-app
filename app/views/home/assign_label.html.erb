@@ -1,0 +1,28 @@
+<h3> Assign Label</h3>
+<%= form_for :label, :url => { :controller=>'home', :action => 'update_case_label' }, :html => { :class => 'form-horizontal', :id=> 'update_case_label_form' } do |f| %>
+  
+<table class="padded_td">
+	<tr>
+		<td>Case:</td>
+		<td> <%= select_tag( "case", options_from_collection_for_select(@cases, "id", "subject", 0), { :include_blank => false, :class=>"form-control long_dropdown" }) %> </td>
+	</tr>
+	<tr>
+		<td>Label:</td>
+		<td> <%= select_tag( "label", options_from_collection_for_select(@labels, "name", "name", 0), { :include_blank => false, :class=>"form-control medium_dropdown"  }) %> </td>
+	</tr> 
+	<tr>
+		<td></td>
+		<td> <%= submit_tag "Save", :class=>"btn btn-primary btn-sm", "data-disable-with" => "Saving...", :style=>"color:#fff" %>
+		<%= link_to "Cancel", root_url, :class=>"btn btn-danger btn-sm", "data-disable-with" => "Loading..." %> </td>
+	</tr>
+</table> 
+<% end %> 	 
+ 
+
+<script type="text/javascript">
+
+	function onSubmitAssignLabelForm(e)
+	{ 		 		 
+		$("#update_case_label_form").submit(); 
+	} 
+</script> 

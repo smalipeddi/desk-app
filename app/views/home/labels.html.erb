@@ -1,0 +1,16 @@
+<h3>Labels</h3> 
+<br />
+<% if @labels.empty? %>
+	<h4>There are no labels to display.</h4> 
+<%else%>
+	<table class="table table-bordered" style="width: 100%">
+		<tr>
+			<th>Name</th> 
+		</tr>
+		<% @labels.each do |l| %>
+ 		<tr>
+ 			<td> <%= l.name %></td> 
+ 		</tr>
+		<%end%> 
+	</table>
+<%end%>
